@@ -3,7 +3,7 @@ function [] = SolveLaplace(number_of_elements)
 
 
 % Create mesh with specified number of elements
-msh = OneDimLinearMeshGen(0,1,number_of_elements);
+msh = OneDimSimpleRefinedMeshGen(0,1,number_of_elements);
 % Apply Nueman boundary condition with g=2 at x=0 (node 1) and Dirichlet
 % boundary conditions with c=0 at x=1 (last node)
 BC_matrix = [1 2 1; msh.ngn 0 0];
